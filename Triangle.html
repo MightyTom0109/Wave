@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triangle demo
+  </title>
+  
+  <link rel="icon" type="image/png" href="assets/logo.png">
+<style>
+  * {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	max-width: 100%;
+	overflow-x: hidden;
+	background: radial-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 60%), rgb(255, 255, 255);
+}
+
+button {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	padding: 0.5rem 1rem;
+	z-index: 1;
+}
+
+.container {
+	--w: min(90vmin, 10rem);
+	
+	/* Hypoteneuse */
+	--h: min(180vmin, 20rem);
+	
+	/* Opposite side – as the points meet in the middle */
+	--o: calc(var(--w) / 2);
+	
+	transform-style: preserve-3d;
+	perspective-origin: center -100%;
+	perspective: 100rem;
+	backface-visibility: hidden;
+	width: var(--w);
+	height: var(--h);
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 50rem;
+}
+
+.shape {
+	--c1: turquoise;
+	--c2: teal;
+	
+	position: relative;
+	width: var(--w);
+	height: var(--h);
+	top: 100%;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	perspective: 300rem;
+	transform: rotateY(45deg) translateY(-100%) translateX(var(--x, 0)) translateZ(var(--z, 0));
+	transition: transform 350ms, height 350ms;
+	will-change: height;
+	
+	> * {
+		position: absolute;
+		inset: 0;
+	}
+	
+	&:nth-child(odd) {
+		--z: -200px;
+		--x: 150px;
+	}
+	
+	&:nth-child(3n) {
+		--c1: deepskyblue;
+		--c2: mediumblue;
+	}
+	
+	&:nth-child(3n - 1) {
+		--c1: orange;
+		--c2: red;
+	}
+}
+
+.shape__base {
+	position: absolute;
+	inset: auto auto 0 0;
+	width: var(--w);
+	height: var(--w);
+	background: var(--c1);
+	transform-origin: bottom center;
+	transform: translateZ(-5rem) translateY(var(--baseY, 0)) rotateX(-90deg);
+	
+	&::after {
+		content: '';
+		position: absolute;
+		inset: auto auto 0 0;
+		width: var(--w);
+		height: var(--w);
+		transform: scale(2);
+		background: radial-gradient(circle at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 65%);
+	}
+}
+
+.shape__side {
+	--path: polygon(50% 0, 100% 100%, 0 100%);
+	
+	width: var(--w);
+	height: var(--h);
+	background: 
+		linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+		radial-gradient(circle, var(--c1), var(--c1) 0.15rem, transparent 0), 
+		linear-gradient(var(--c1), var(--c2));
+	background-size: 100% 100%, 0.75rem 1.75rem, 100% 100%;
+	-webkit-clip-path: var(--path);
+	clip-path: var(--path);
+	transform-origin: bottom center;
+	transform: 	
+		translate3d(var(--tx, 0), var(--ty, 0), var(--tz, 0))
+		rotateY(var(--ry, 0)) 
+		rotateX(var(--angle, 15deg));
+	transition: transform 350ms, height 350ms;
+	will-change: height;
+	
+	&:first-child {
+		--tz: calc(var(--w) / 2);
+	}
+	
+	&:nth-child(2) {
+		--ry: 90deg;
+		--tx: 50%;
+	}
+	
+	&:nth-child(3) {
+		--ry: -90deg;
+		--tx: -50%;
+	}
+	
+	&:nth-child(4) {
+		--ry: 180deg;
+		--tz: calc(var(--w) / 2 * -1);
+	}
+}
+
+.btn{display:flex; flex-direction: row;}
+
+.men{left: 150px;}
+
+</style>
+
+</head>
+<body>
+    <div class="btn">
+<button data-btn>Resize pyramids</button>
+<button class="men" onclick="window.location.href='wave.html'"> Back the menu </a>
+</div>
+
+<div class="container">
+	<div class="shape">
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__base"></div>
+	</div>
+	<div class="shape">
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__base"></div>
+	</div>
+	<div class="shape">
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__base"></div>
+	</div>
+	<div class="shape">
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__base"></div>
+	</div>
+	<div class="shape">
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__side"></div>
+		<div class="shape__base"></div>
+	</div>
+</div>
+
+<script>
+    const shapes = [...document.querySelectorAll('.shape')]
+const button = document.querySelector('[data-btn]')
+
+const getRandom = (min, max) => {
+  return Math.floor(Math.random() * (max - min) + min)
+}
+
+const setAngles = () => {
+	shapes.forEach((shape) => {
+		const o = shape.clientWidth / 2
+		const h = getRandom(100, 450)
+		const radians = Math.asin(o / h)
+
+		shape.style.setProperty('--h', `${h}px`)
+		shape.style.setProperty('--angle', `${radians}rad`)
+	})
+}
+
+setAngles()
+
+button.addEventListener('click', setAngles)
+</script>
+
+</body>
+</html>

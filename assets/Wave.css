@@ -1,0 +1,129 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 2500px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 90%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    line-height: 100px;
+  }
+  
+  .sidepanel a:hover {
+    color: #131212;
+    background-color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+   
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    height: 60px;
+  }
+  
+  .openbtn:hover {
+    background-color:#444;
+  }
+
+  .button{
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+
+  }
+
+  .entry {
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+  }
+
+ h2{font-size: 180px; text-align: center; padding-top: 100px;}
+ p{font-size: 50px;  text-align: center;}
+ .trig{font-size: 18px; color: aliceblue; padding: 8px 20px 8px 50px ; text-align: left;}
+
+ .sidepanel2  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 350px;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel2 a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  line-height: 25px;
+}
+
+.sidepanel2 a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel2 .closebtn2 {
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  font-size: 36px;
+ 
+}
+
+.openbtn2 {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn2:hover {
+  background-color:#444;
+}
+
+.chart{display: flex;
+  justify-self: center;
+  margin-top: 300px;
+  scale: 290%;}
