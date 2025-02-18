@@ -1,18 +1,12 @@
 body {
     font-family: "Lato", sans-serif;
-   
-    background-image: linear-gradient(rgba(223, 253, 113, 0.991), rgb(152, 250, 107));
-  
- /* Full height */
- height: 200%;
-
- /* Center and scale the image nicely */
- background-position: bottom;
- background-repeat: no-repeat;
- 
+    background-image: url(sine.png);
+    
+  background-size: cover;
+    
+    
   }
   
-
   .sidepanel  {
     width: 0;
     position: fixed;
@@ -55,7 +49,7 @@ body {
     cursor: pointer;
     background-color: #000000;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 30px 10px 15px;
     border: none;
     height: 60px;
   }
@@ -67,8 +61,9 @@ body {
   .button{
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
+   
 
 
   }
@@ -83,17 +78,18 @@ body {
   }
 
  h2{font-size: 180px; text-align: center; padding-top: 100px;}
- p{font-size: 50px;  text-align: center; margin-bottom: 180px;}
- .trig{font-size: 18px; color: aliceblue; padding: 8px 20px 8px 50px ; text-align: left;}
+ p{font-size: 50px;  text-align: center;}
+ .trig{font-size: 18px; color: rgb(0, 0, 0); padding: 8px 20px 8px 50px ; text-align: left;}
+ .trig2{font-size: 18px; color: white; padding: 8px 20px 8px 50px; text-align: left;}
 
  .sidepanel2  {
   width: 0;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   height: 350px;
-  top: 0;
-  right: 0;
-  background-color: #000000;
+  top: 40vh;
+  left: 20vw;
+  background-image: linear-gradient(to bottom right, rgb(226, 243, 143), rgb(58, 241, 107));
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -126,19 +122,62 @@ body {
   cursor: pointer;
   background-color: #111;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 25px 10px 25px;
   border: none;
+ 
 }
 
 .openbtn2:hover {
   background-color:#444;
 }
 
-  .dot{width: 50px;
-  height: 50px;
-border-radius: 50%;
-border: 5px solid red;
-display: flex;
-justify-self: center;
-margin: 200px 0px 0px 0px;}
+.sidepanel3  {
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  height: 350px;
+  top: 10vh;
+  right: 30vw;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel3 a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  line-height: 25px;
+}
+
+.sidepanel3 a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel3 .closebtn3 {
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  font-size: 36px;
+ 
+}
+
+.openbtn3 {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 25px 10px 25px;
+  border: none;
+ 
+}
+
+.openbtn3:hover {
+  background-color:#444;
+}
+
 

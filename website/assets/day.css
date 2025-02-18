@@ -1,0 +1,133 @@
+.circle {
+    position: absolute;
+    top: 94.5vh;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 200px;
+    border-radius: 150px 150px 0 0;
+    border: 2px solid black;
+    scale: 400%;
+   
+
+}
+
+body, html {
+    height: 100%;
+     /* The image used */
+     background-image: url("day.png");
+  
+     /* Full height */
+     height: 100%;
+   
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   
+  }
+  
+
+   
+
+ .go a:hover {background-color: black;}
+ .circle:hover{background-color: rgb(197, 197, 197);
+}
+.text:hover{visibility: visible; color: black;}
+ .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+ 
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 2500px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 90%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  line-height: 100px;
+}
+
+.sidepanel a:hover {
+  color: #131212;
+  background-color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+ 
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  height: 60px;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+.button{
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+
+}
+
+.entry {
+  overflow: hidden;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.para{height: 10vh;
+width: 13vw;
+position: absolute;
+top: 18vh;
+left: 10vw;
+font-size: 17px;}
+
+.para1{height: 10vh;
+  width: 13vw;
+  position: absolute;
+  top: 18vh;
+  right: 10vw;
+  font-size: 17px;}
+  
+  

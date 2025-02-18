@@ -1,0 +1,13 @@
+@keyframes move-out{
+    from{transform: translateY(0%);}
+    to{transform: translateY(-100%);}
+  }
+  
+  ::view-transition-old(root){animation: 0.8s cubic-bezier(0.87,0,0.13,1) both move-out;}
+
+  @keyframes move-in{
+    from{transform: translateY(100%);}
+    to{transform: translateY(0%);}
+   }
+  
+   ::view-transition-new(root){animation: 0.8s cubic-bezier(0.87,0,0.13,1) both move-in;}
